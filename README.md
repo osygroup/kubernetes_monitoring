@@ -4,7 +4,7 @@
 
 Create a namespace called 'monitoring':
 
-kubectl create namespace monitoring 
+$ kubectl create namespace monitoring 
 
 ## Install Blackbox Exporter
 
@@ -16,4 +16,8 @@ $ helm repo update
 
 $ helm install prometheus-blackbox-exporter prometheus-community/prometheus-blackbox-exporter -n monitoring
 
+## Install Prometheus
 
+A configmap is used to create the prometheus.yaml file that will be mounted in the /etc/prometheus/ directory in the prometheus pod.
+
+From the kubernetes-prometheus-files directory, install the configmap. It has 'job_name: blackbox' block added, used for listing the endpoints to be monitored 
