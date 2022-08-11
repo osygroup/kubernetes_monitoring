@@ -50,7 +50,7 @@ Don't forget to save the dashboard.
 
 
 
-Credits:
+### Credits:
 
 https://prometheus-community.github.io/helm-charts
 
