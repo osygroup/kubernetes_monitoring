@@ -2,7 +2,7 @@
 
 ## Create namespace for all the resources needed
 
-Create a namespace called 'monitoring':
+Create a namespace called 'monitoring' or any name of choice:
 
 $ kubectl create namespace monitoring 
 
