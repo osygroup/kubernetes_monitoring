@@ -30,7 +30,7 @@ $ kubectl apply -f clusterRole.yaml
 
 $ kubectl apply -f prometheus-deployment.yaml
 
-$ kubectl apply -f prometheus-service-internal
+$ kubectl apply -f prometheus-service-internal.yaml
 
 For external access, you can also install nodePort, LB or Ingress.
 
