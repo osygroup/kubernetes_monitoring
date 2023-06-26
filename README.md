@@ -38,7 +38,7 @@ For external access, you can also install nodePort, LB or Ingress.
 
 From the kubernetes-grafana-files directory, install the deployment and service files. For external access, you can use a nodePort, LB or Ingress. You can create the yaml files yourself and install in the 'monitoring' namespace.
 
-To add prometheus as a datasource, use the DNS name of your Prometheus internal service (e.g. your-svc.your-namespace.svc.cluster.local:port) or public url (if you setup nodePort, LB or Ingress) as the endpoint.
+To add prometheus as a datasource, use the DNS name of your Prometheus internal service (e.g. http://your-svc.your-namespace.svc.cluster.local:port) or public url (if you setup nodePort, LB or Ingress) as the endpoint.
 
 Prometheus Blackbox Exporter dashboard: https://grafana.com/grafana/dashboards/7587
 
