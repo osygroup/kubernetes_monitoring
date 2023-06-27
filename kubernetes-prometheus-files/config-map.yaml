@@ -38,6 +38,8 @@ data:
         - source_labels: [__meta_kubernetes_endpoints_name]
           regex: 'node-exporter'
           action: keep
+        static_configs:
+          - targets: ['node-exporter.monitoring.svc.cluster.local:9100']
       
       - job_name: 'kubernetes-apiservers'
 
