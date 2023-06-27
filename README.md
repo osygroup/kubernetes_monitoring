@@ -55,9 +55,9 @@ From the root of the repository, install all the manifest files in the kube-stat
 
 kubectl apply -f kube-state-metrics/
 
-Import the kube-state-metrics-v2 Grafana dashboard with ID 13332 to view the metrics.
-
 Import K8s Resource Monitoring dashboard with ID 17375 to view pod-specific metrics.
+
+Import kube-state-metrics-v2 Grafana dashboard with ID 13332 to view the metrics (not a very useful dashboard).
 
 ## Install node-exporter
 
