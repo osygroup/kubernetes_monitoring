@@ -67,7 +67,7 @@ kubectl apply -f node-exporter/
 
 Import the Node Exporter Full Grafana dashboard with ID 1860 to view the node-related metrics.
 
-If you can't see any data (N/A), change the time range to a wider one or a lesser one.
+If you can't see any data (N/A), change the time range to a wider one or a lesser one. If it does not work, logout from Grafana and then login.
 
 ### Credits:
 
