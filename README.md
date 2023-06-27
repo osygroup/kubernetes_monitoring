@@ -47,15 +47,25 @@ Go to Grafana -> + sign -> Import and enter 7587 number.
 Don't forget to save the dashboard.
 
 
-### With Prometheus running in the cluster only, you will get limited metrics but with kube-state-metrics installed and being scrapped by Prometheus, you will get more metrics.
+### With Prometheus running in the cluster only, you will get limited metrics but with metrics collectors like  kube-state-metrics and node-exporter installed and being scrapped by Prometheus, you will get more metrics.
 
 ## Install kube-state-metrics
 
-From the root of the repository, install all the manifest files in the kube-state-metrics directory. The default namespace for the created resources is kube-system, which is a system namespace and already exists
+From the root of the repository, install all the manifest files in the kube-state-metrics directory. The default namespace for the created resources is kube-system, which is a system namespace and already exists.
 
 kubectl apply -f kube-state-metrics/
 
 Import the kube-state-metrics-v2 Grafana dashboard with ID 13332 to view the metrics.
+
+Import K8s Resource Monitoring dashboard with ID 17375 to view pod-specific metrics.
+
+## Install node-exporter
+
+From the root of the repository, install all the manifest files in the node-exporter directory.
+
+kubectl apply -f node-exporter/
+
+Import the Node Exporter Full Grafana dashboard with ID 1860 to view the node-related metrics.
 
 ### Credits:
 
@@ -70,3 +80,5 @@ https://grafana.com/docs/grafana/latest/setup-grafana/installation/kubernetes/
 https://chrisedrego.medium.com/kubernetes-monitoring-kube-state-metrics-df6546aea324
 
 https://github.com/kubernetes/kube-state-metrics/tree/main
+
+https://devopscube.com/node-exporter-kubernetes/
