@@ -34,6 +34,8 @@ $ kubectl apply -f prometheus-service-internal.yaml
 
 For external access, you can also install nodePort, LB or Ingress.
 
+For the Data Source configuration for Prometheus, the URL should be exactly this way: http://prometheus-service.monitoring.svc.cluster.local:9090 (don't ignore the 'http://' or it won't work)
+
 ## Install Grafana
 
 From the kubernetes-grafana-files directory, install the deployment and service files. For external access, you can use a nodePort, LB or Ingress. You can create the yaml files yourself and install in the 'monitoring' namespace.
