@@ -8,15 +8,17 @@ metadata:
 data:
   prometheus.rules: |-
     groups:
-    - name: devopscube demo alert
+    - name: demo alert
       rules:
-      - alert: High Pod Memory
-        expr: sum(container_memory_usage_bytes) > 1
-        for: 1m
+      - alert: Endpoint Down
+        expr: probe_success == 0
+        for: 10s
         labels:
-          severity: slack
+          severity: "critical"
         annotations:
-          summary: High Memory Usage
+          #summary: "Endpoint down"
+          identifier: '{{ $labels.instance }}'
+          description: 'This service has been down for more than 5 minutes.'
   prometheus.yml: |-
     global:
       scrape_interval: 10s
